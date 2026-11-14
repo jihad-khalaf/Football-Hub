@@ -1,0 +1,290 @@
+/* Styles for the About page (pages/About.jsx). */
+
+.about {
+  padding-bottom: 96px;
+}
+
+/* ---------- banner: text on a photo, so colours are fixed ---------- */
+.about-banner {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #0b0c0e;
+  background-size: cover;
+  background-position: center;
+  color: #f3f2ee;
+}
+
+.about-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0b0c0e 5%, rgba(11, 12, 14, 0.6) 60%, rgba(11, 12, 14, 0.55));
+}
+
+.about-banner .container {
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+
+.about-banner h1 {
+  font-size: 112px;
+}
+
+.about-banner p {
+  max-width: 520px;
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #d5d7da;
+}
+
+/* ---------- sections ---------- */
+.about-section {
+  padding-top: 88px;
+}
+
+/* the idea: text on the left, the two old projects on the right */
+.about-idea {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+}
+
+.about-intro p {
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.old-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.old-project {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  background: var(--panel);
+  border-bottom: 4px solid #f2b632;
+  transition: transform 0.2s;
+}
+
+.old-project:hover {
+  transform: translateY(-4px);
+}
+
+.old-project span {
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.old-project h3 {
+  font-size: 36px;
+}
+
+.old-project .old-author {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.old-project p {
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.old-project b {
+  margin-top: auto;
+  padding-top: 8px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 4px;
+}
+
+/* ---------- who we are ---------- */
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.person {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.person h3 {
+  font-size: 48px;
+}
+
+.person p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.person a {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.person a:hover {
+  color: var(--text);
+}
+
+/* ---------- how it is built ---------- */
+.built {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.built div {
+  padding-top: 18px;
+  border-top: 3px solid var(--accent);
+}
+
+.built b {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.built p {
+  margin-top: 8px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* ---------- credits ---------- */
+.credits-toggle {
+  flex-shrink: 0;
+  padding: 10px 18px;
+  border: 1px solid var(--line-strong);
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.credits-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.other-credits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 48px;
+  margin-top: 28px;
+}
+
+.other-credits p {
+  margin-top: 6px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.credit-groups {
+  margin-top: 40px;
+}
+
+.credit-group {
+  margin-top: 32px;
+}
+
+.credit-group h3 {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.credit-group .table-scroll {
+  overflow-x: auto;
+}
+
+.credit-group table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.credit-group th,
+.credit-group td {
+  padding: 10px 16px 10px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.credit-group th {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.credit-group td {
+  color: var(--muted);
+}
+
+.credit-group td:first-child {
+  color: var(--text);
+}
+
+/* ---------- smaller screens ---------- */
+@media (max-width: 1024px) {
+  .about-idea {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .built {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-banner {
+    min-height: 280px;
+  }
+
+  .about-banner h1 {
+    font-size: 64px;
+  }
+
+  .about-section {
+    padding-top: 64px;
+  }
+
+  .old-projects,
+  .team,
+  .built,
+  .other-credits {
+    grid-template-columns: 1fr;
+  }
+
+  .person h3 {
+    font-size: 40px;
+  }
+
+  .about .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

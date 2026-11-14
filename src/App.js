@@ -8,6 +8,7 @@ import Club from './pages/Club';
 import Matches from './pages/Matches';
 import Players from './pages/Players';
 import News from './pages/News';
+import About from './pages/About';
 import Clubs from './pages/Clubs';
 import Contact from './pages/Contact';
 import ComingSoon from './pages/ComingSoon';
@@ -33,6 +34,7 @@ function App() {
             <Route path="/matches" element={<Matches />} />
             <Route path="/players" element={<Players />} />
             <Route path="/news" element={<News />} />
+            <Route path="/about" element={<About />} />
             <Route path="/clubs" element={<Clubs />} />
             <Route path="/contact" element={<Contact />} />
             {/* pages that are not built yet show a temporary page */}
