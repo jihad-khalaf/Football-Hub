@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
 import ScoreItem from '../components/ScoreItem';
 import ClubCard from '../components/ClubCard';
@@ -9,6 +9,11 @@ import { clubs } from '../data/clubs';
 import '../styles/Home.css';
 
 const Home = () => {
+  // HOOK: start at the top of the page when it opens ([] = run once)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="home">
       <Hero />

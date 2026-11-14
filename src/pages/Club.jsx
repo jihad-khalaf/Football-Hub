@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import TeamCrest from '../components/TeamCrest';
 import Lineup from '../components/Lineup';
@@ -23,6 +23,12 @@ const clubDetails = {
 const Club = () => {
   // HOOK: useParams reads the ":id" part of the URL, e.g. 'real-madrid'
   const { id } = useParams();
+
+  // HOOK: React Router keeps the old scroll position when the page changes,
+  // so jump back to the top every time the club id in the URL changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   // find the club with that id in the array
   const club = clubs.find((c) => c.id === id);
