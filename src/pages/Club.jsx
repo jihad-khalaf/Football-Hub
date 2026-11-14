@@ -5,11 +5,17 @@ import Lineup from '../components/Lineup';
 import TrophyItem from '../components/TrophyItem';
 import { clubs } from '../data/clubs';
 import { realMadrid } from '../data/realMadrid';
+import { barcelona } from '../data/barcelona';
+import { bayernMunich } from '../data/bayernMunich';
+import { juventus } from '../data/juventus';
 import '../styles/Club.css';
 
 // the detailed data for each club, looked up by the club id
 const clubDetails = {
   'real-madrid': realMadrid,
+  barcelona: barcelona,
+  'bayern-munich': bayernMunich,
+  juventus: juventus,
 };
 
 // DYNAMIC PAGE: one component for every club.
@@ -70,7 +76,8 @@ const Club = () => {
           <Lineup rows={details.lineup} />
 
           <div className="coach">
-            <img src={details.coach.photo} alt={details.coach.name} />
+            {/* some coach photos are cut-outs (shown whole), others are normal photos (cropped to fill) */}
+            <img src={details.coach.photo} alt={details.coach.name} style={{ objectFit: details.coach.fit }} />
             <span> {details.coach.role} </span>
             <h3 className="display"> {details.coach.name} </h3>
             <p> {details.lineupNote} </p>

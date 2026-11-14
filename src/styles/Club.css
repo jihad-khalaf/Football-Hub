@@ -114,8 +114,8 @@
   width: 100%;
   height: 380px;
   margin-bottom: 12px;
-  object-fit: contain; /* the coach photo is a cut-out, so show all of it */
-  object-position: center bottom;
+  object-fit: contain; /* cut-out photos are shown whole; other photos set 'cover' in the data file */
+  object-position: center top;
   background: var(--panel);
   border: 1px solid var(--line);
   border-bottom: 5px solid var(--club);
