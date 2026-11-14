@@ -11,6 +11,8 @@ import News from './pages/News';
 import About from './pages/About';
 import Clubs from './pages/Clubs';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
+// TEMPORARY: Jihad replaces this line with: import Features from './pages/Features';
 import ComingSoon from './pages/ComingSoon';
 
 function App() {
@@ -37,8 +39,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/clubs" element={<Clubs />} />
             <Route path="/contact" element={<Contact />} />
-            {/* pages that are not built yet show a temporary page */}
-            <Route path="*" element={<ComingSoon />} />
+            {/* TEMPORARY: Jihad replaces <ComingSoon /> with <Features /> */}
+            <Route path="/features" element={<ComingSoon />} />
+            {/* "*" matches any other address, so unknown pages show "Page not found" */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

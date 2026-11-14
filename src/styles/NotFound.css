@@ -1,0 +1,59 @@
+/* Styles for the "Page not found" page (pages/NotFound.jsx).
+   The text sits on a photo, so its colours are fixed in both themes. */
+
+.not-found {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: #0b0c0e;
+  background-size: cover;
+  background-position: center;
+  color: #f3f2ee;
+}
+
+/* dark layer over the photo so the text is easy to read */
+.not-found::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(11, 12, 14, 0.92) 35%, rgba(11, 12, 14, 0.55));
+}
+
+.not-found .container {
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.not-found span {
+  font-size: 24px;
+  color: #f2b632;
+}
+
+.not-found h1 {
+  margin-top: 8px;
+  font-size: 160px;
+  line-height: 0.85;
+}
+
+.not-found p {
+  max-width: 420px;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #d5d7da;
+}
+
+.not-found-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+@media (max-width: 640px) {
+  .not-found h1 {
+    font-size: 96px;
+  }
+}
