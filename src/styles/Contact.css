@@ -1,0 +1,255 @@
+/* Styles for the Contact page (pages/Contact.jsx). */
+
+.contact {
+  padding-bottom: 96px;
+}
+
+/* ---------- banner: text on a photo, so colours are fixed ---------- */
+.contact-banner {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #0b0c0e;
+  background-size: cover;
+  background-position: center 40%;
+  color: #f3f2ee;
+}
+
+.contact-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0b0c0e 5%, rgba(11, 12, 14, 0.6) 60%, rgba(11, 12, 14, 0.55));
+}
+
+.contact-banner .container {
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+
+.contact-banner h1 {
+  font-size: 112px;
+}
+
+.contact-banner p {
+  max-width: 520px;
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #d5d7da;
+}
+
+/* ---------- information on the left, form on the right ---------- */
+.contact-columns {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 72px;
+  padding-top: 72px;
+}
+
+.contact-info p {
+  margin-top: 18px;
+  max-width: 420px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.contact-facts {
+  margin-top: 36px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-facts span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.contact-facts b {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* ---------- the form ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+/* amber border on the field being typed in */
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-bottom .btn {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.form-notice {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- sent messages ---------- */
+.sent {
+  margin-top: 96px;
+}
+
+.sent-empty {
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+.sent h2 {
+  margin-bottom: 20px;
+}
+
+.sent-item {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.sent-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.sent-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.sent-top span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.sent-top button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sent-top button:hover {
+  color: var(--text);
+}
+
+.sent-item h3 {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sent-item small {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.sent-item p {
+  margin-top: 8px;
+  max-width: 760px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ---------- smaller screens ---------- */
+@media (max-width: 900px) {
+  .contact-columns {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-banner {
+    min-height: 280px;
+  }
+
+  .contact-banner h1 {
+    font-size: 64px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-columns {
+    padding-top: 48px;
+  }
+
+  .sent {
+    margin-top: 64px;
+  }
+}
