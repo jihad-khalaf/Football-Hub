@@ -1,0 +1,23 @@
+/* The logo always sits on the dark navbar, so its colours are fixed. */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  color: #f2b632;
+}
+
+.logo-name {
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #f3f2ee;
+}
+
+.logo-name span {
+  color: #f2b632;
+}

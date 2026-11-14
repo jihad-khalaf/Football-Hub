@@ -1,0 +1,103 @@
+/* The navbar is dark in both themes, so its colours are fixed. */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0b0c0e;
+  color: #f3f2ee;
+  border-bottom: 1px solid #25272b;
+}
+
+.navbar-inner {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #f2b632;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-button {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: #f3f2ee;
+}
+
+.theme-button {
+  border: 1px solid #3a3d43;
+  border-radius: 50%;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.theme-button:hover {
+  border-color: #f2b632;
+  color: #f2b632;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* ---------- tablet and phone: links become a drop-down menu ---------- */
+@media (max-width: 1024px) {
+  .menu-button {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 32px 16px;
+    background: #0b0c0e;
+    border-bottom: 1px solid #25272b;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px 0;
+    border-bottom: 1px solid #25272b;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    padding: 8px 20px 16px;
+  }
+}

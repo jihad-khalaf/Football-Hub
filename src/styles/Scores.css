@@ -1,0 +1,93 @@
+/* the row of today's scores under the hero */
+.scores {
+  border-bottom: 1px solid var(--line);
+}
+
+.scores-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 28px;
+  border-right: 1px solid var(--line);
+  transition: background-color 0.2s;
+}
+
+.score-item:last-child {
+  border-right: 0;
+}
+
+.score-item:hover {
+  background: var(--panel);
+}
+
+.score-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.score-status.live {
+  color: var(--accent);
+}
+
+/* blinking dot before "Live" */
+.score-status.live::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: blink 1.6s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.score-team {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+/* pushes the goals to the right edge */
+.score-team b {
+  margin-left: auto;
+  font-size: 24px;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .scores-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .score-item {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 640px) {
+  .scores-row {
+    grid-template-columns: 1fr;
+  }
+
+  .score-item {
+    padding: 18px 20px;
+    border-right: 0;
+  }
+}

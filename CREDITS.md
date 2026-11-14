@@ -15,7 +15,7 @@ All photos are from [Wikimedia Commons](https://commons.wikimedia.org) and are u
 
 ## Club crests
 
-The crests in `src/assets/logos` are the official crests of each club, taken from the clubs' English Wikipedia articles. They are trademarks of their clubs and are used here only to identify the clubs in a student project. The Juventus crest is recoloured to white so it shows on a dark background.
+The crests in `src/assets/logos` are the official crests of each club, taken from the clubs' English Wikipedia articles (as PNG images; Juventus as SVG). They are trademarks of their clubs and are used here only to identify the clubs in a student project. The Juventus crest is recoloured to white so it shows on a dark background.
 
 ## Fonts
 

@@ -1,0 +1,137 @@
+/*
+  THEME COLOURS
+  Every colour that changes between dark and light mode is a CSS variable.
+  App.js puts the class "dark" or "light" on the .App div, and the rest of
+  the CSS files only use the variables, e.g. color: var(--text).
+*/
+.App.dark {
+  --page: #0b0c0e; /* page background */
+  --panel: #131418; /* hover rows and raised boxes */
+  --text: #f3f2ee;
+  --muted: #b9bbc0; /* secondary text */
+  --line: #25272b;
+  --line-strong: #3a3d43;
+  --accent: #f2b632; /* amber used for small text and marks */
+}
+
+.App.light {
+  --page: #f6f5f1;
+  --panel: #ffffff;
+  --text: #111317;
+  --muted: #565b64;
+  --line: #dfded9;
+  --line-strong: #bdbcb6;
+  --accent: #8a5a00; /* darker amber, readable on a light page */
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--page);
+  color: var(--text);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.App main {
+  flex: 1;
+}
+
+/* ---------- shared classes used by several components ---------- */
+
+/* centres the content and keeps the same side padding everywhere */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* big condensed uppercase headings */
+.display {
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.section-title {
+  font-size: 44px;
+}
+
+/* heading on the left, "see all" link on the right */
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-link {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.section-link:hover {
+  color: var(--text);
+}
+
+/* amber button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  height: 52px;
+  padding: 0 28px;
+  border: 1px solid #f2b632;
+  background: #f2b632;
+  color: #0b0c0e;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  background: #f3f2ee;
+  border-color: #f3f2ee;
+}
+
+/* outlined button, used on top of photos */
+.btn-outline {
+  background: transparent;
+  border-color: #f3f2ee;
+  color: #f3f2ee;
+}
+
+.btn-outline:hover {
+  background: transparent;
+  border-color: #f2b632;
+  color: #f2b632;
+}
+
+/* club crests: same box for every crest so they line up */
+.crest {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* a white crest (Juventus) turns black on the light page */
+.App.light .crest.white-crest {
+  filter: invert(1);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+}

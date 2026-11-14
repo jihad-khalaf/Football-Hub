@@ -1,9 +1,19 @@
-import { teams } from '../data/teams.js'
+import React from 'react';
+import { teams } from '../data/teams';
 
-// A club crest at a fixed box size, so crests of different shapes line up.
-// `onPhoto` means the crest sits on a dark photo, so a white crest must stay white.
-export default function TeamCrest({ team, className = 'h-7 w-7', onPhoto = false }) {
-  const { name, logo, whiteCrest } = teams[team]
-  const adaptive = whiteCrest && !onPhoto ? 'crest-adaptive' : ''
-  return <img src={logo} alt={`${name} crest`} loading="lazy" className={`shrink-0 object-contain ${adaptive} ${className}`} />
-}
+// Shows one club crest. PROPS:
+//   team    - the team id, e.g. 'real-madrid' (looked up in data/teams.js)
+//   size    - width and height in pixels (default 28)
+//   onPhoto - true when the crest sits on a dark photo, so a white crest stays white
+const TeamCrest = ({ team, size = 28, onPhoto = false }) => {
+  const club = teams[team];
+
+  let className = 'crest';
+  if (club.whiteCrest && !onPhoto) {
+    className = 'crest white-crest';
+  }
+
+  return <img className={className} src={club.logo} alt={club.name + ' crest'} width={size} height={size} />;
+};
+
+export default TeamCrest;

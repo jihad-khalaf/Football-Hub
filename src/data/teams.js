@@ -1,16 +1,16 @@
 // Every team that appears in scores and tables, with its crest.
-import realMadrid from '../assets/logos/real-madrid.svg'
-import barcelona from '../assets/logos/barcelona.svg'
-import bayernMunich from '../assets/logos/bayern-munich.svg'
+import realMadrid from '../assets/logos/real-madrid.png'
+import barcelona from '../assets/logos/barcelona.png'
+import bayernMunich from '../assets/logos/bayern-munich.png'
 import juventus from '../assets/logos/juventus.svg'
-import atleticoMadrid from '../assets/logos/atletico-madrid.svg'
-import villarreal from '../assets/logos/villarreal.svg'
-import athleticClub from '../assets/logos/athletic-club.svg'
+import atleticoMadrid from '../assets/logos/atletico-madrid.png'
+import villarreal from '../assets/logos/villarreal.png'
+import athleticClub from '../assets/logos/athletic-club.png'
 import realBetis from '../assets/logos/real-betis.png'
-import realSociedad from '../assets/logos/real-sociedad.svg'
+import realSociedad from '../assets/logos/real-sociedad.png'
 import sevilla from '../assets/logos/sevilla.png'
 import getafe from '../assets/logos/getafe.png'
-import rbLeipzig from '../assets/logos/rb-leipzig.svg'
+import rbLeipzig from '../assets/logos/rb-leipzig.png'
 
 export const teams = {
   'real-madrid': { name: 'Real Madrid', logo: realMadrid },

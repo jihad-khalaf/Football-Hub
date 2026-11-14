@@ -1,0 +1,92 @@
+.standings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0; /* lets the table shrink and scroll inside the grid column */
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.standings table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+
+.standings th {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line-strong);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--muted);
+}
+
+.standings td {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  color: var(--muted);
+}
+
+/* the first two columns (position and club) are left-aligned */
+.standings th:nth-child(1),
+.standings th:nth-child(2),
+.standings td:nth-child(1),
+.standings td:nth-child(2) {
+  text-align: left;
+}
+
+.standings th:nth-child(1) {
+  width: 40px;
+}
+
+/* number columns all get the same width */
+.standings th:nth-child(n + 3) {
+  width: 46px;
+}
+
+.standings td.position {
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.standings td.position.top {
+  color: var(--accent);
+}
+
+.table-club {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.standings td.points {
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.table-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* small amber square before the note */
+.table-note::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+}

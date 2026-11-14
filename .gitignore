@@ -1,7 +1,8 @@
 node_modules
-dist
+build
 .DS_Store
 *.local
 
-# Planning notes, not part of the website
+# Planning notes and course material, not part of the website
 Football-Hub-Vault/
+CS426 WEB UNI DOCS/

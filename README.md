@@ -6,9 +6,9 @@ Fans usually need one site for scores and another for club history and squads. F
 
 ## Built with
 
-- React 19 and React Router
-- Vite
-- Tailwind CSS 4
+- React 19 (Create React App)
+- React Router
+- Plain CSS, one file per component
 
 ## Run it locally
 
@@ -16,24 +16,26 @@ You need Node.js 20 or newer.
 
 ```bash
 npm install
-npm run dev
+npm start
 ```
 
-Then open http://localhost:5173.
+Then open http://localhost:3000.
 
 To make a production build:
 
 ```bash
 npm run build
-npm run preview
 ```
 
 ## Project structure
 
 ```
 src/
+  App.js        routes and the dark/light theme
   pages/        one file per page
-  components/   navbar, footer, hero, score strip, club grid, tables
+  components/   navbar, footer, hero, score item, club card, table, news
+  styles/       one CSS file per component
+  hooks/        useLocalStorage (saves the theme)
   data/         sample data: teams, clubs, matches, standings, news
   assets/       club crests and photos
 ```

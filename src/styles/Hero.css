@@ -1,0 +1,144 @@
+/* The hero text sits on a photo, so its colours are fixed in both themes. */
+.hero {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #0b0c0e;
+  background-size: cover;
+  background-position: center 60%;
+  color: #f3f2ee;
+}
+
+/* dark layer over the photo so the text is easy to read */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0b0c0e 0%, rgba(11, 12, 14, 0.65) 45%, rgba(11, 12, 14, 0.6) 100%);
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* short amber line before the label */
+.hero-label::before {
+  content: '';
+  width: 36px;
+  height: 3px;
+  background: #f2b632;
+}
+
+.hero-crests {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-crests span {
+  font-size: 24px;
+  font-weight: 600;
+  color: #b9bbc0;
+}
+
+.hero-title {
+  font-size: 136px;
+  line-height: 0.88;
+}
+
+.hero-title span {
+  color: #f2b632;
+}
+
+.hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 44px;
+}
+
+.hero-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-facts span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b9bbc0;
+}
+
+.hero-facts b {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-title {
+    font-size: 96px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero-content {
+    gap: 22px;
+    padding-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+  }
+
+  .hero-crests img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero-facts b {
+    font-size: 18px;
+  }
+}

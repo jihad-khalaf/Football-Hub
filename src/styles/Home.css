@@ -1,0 +1,21 @@
+/* table and news side by side: the table gets a bit more room */
+.home-columns {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 56px;
+  padding-top: 80px;
+  padding-bottom: 88px;
+}
+
+@media (max-width: 1024px) {
+  .home-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-columns {
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
+}
