@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Club from './pages/Club';
 import Matches from './pages/Matches';
+import Players from './pages/Players';
 import Clubs from './pages/Clubs';
 import Contact from './pages/Contact';
 import ComingSoon from './pages/ComingSoon';
@@ -29,7 +30,8 @@ function App() {
             {/* dynamic route: ":id" can be any club, e.g. /clubs/real-madrid */}
             <Route path="/clubs/:id" element={<Club />} />
             <Route path="/matches" element={<Matches />} />
-            <Route path="/clubs"element={<Clubs />} />
+            <Route path="/players" element={<Players />} />
+            <Route path="/clubs" element={<Clubs />} />
             <Route path="/contact" element={<Contact />} />
             {/* pages that are not built yet show a temporary page */}
             <Route path="*" element={<ComingSoon />} />
