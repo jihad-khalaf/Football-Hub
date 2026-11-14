@@ -1,0 +1,144 @@
+/* Styles for the Clubs page (pages/Clubs.jsx).
+   Clubs.css is the club tiles on the Home page; this file is the full list page. */
+
+.clubs-page {
+  padding-bottom: 96px;
+}
+
+.clubs-page-head {
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+
+.clubs-page-head h1 {
+  font-size: 112px;
+}
+
+.clubs-page-head p {
+  max-width: 560px;
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- one club: photo and text side by side ---------- */
+.club-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+
+/* every second row: photo on the right */
+.club-row:nth-child(even) .club-row-photo {
+  order: 2;
+}
+
+.club-row-photo {
+  display: block;
+  overflow: hidden;
+  border-bottom: 5px solid var(--club);
+}
+
+.club-row-photo img {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  transition: transform 0.7s;
+}
+
+.club-row-photo:hover img {
+  transform: scale(1.05);
+}
+
+.club-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.club-row-top span {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.club-row-text h2 {
+  margin-top: 20px;
+  font-size: 72px;
+}
+
+.club-row-text > p {
+  margin-top: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.club-row-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 28px 0 32px;
+  border-top: 1px solid var(--line);
+}
+
+.club-row-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.club-row-facts span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.club-row-facts b {
+  font-weight: 600;
+}
+
+/* ---------- smaller screens: photo on top, text under it ---------- */
+@media (max-width: 900px) {
+  .club-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .club-row:nth-child(even) .club-row-photo {
+    order: 0;
+  }
+
+  .club-row-photo img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .clubs-page-head {
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+
+  .clubs-page-head h1 {
+    font-size: 64px;
+  }
+
+  .club-row {
+    padding: 40px 0;
+  }
+
+  .club-row-photo img {
+    height: 240px;
+  }
+
+  .club-row-text h2 {
+    font-size: 52px;
+  }
+}
