@@ -1,17 +1,43 @@
 @import "tailwindcss";
 
-/* Design tokens for the "Match Night" look. */
+/*
+  Design tokens for the "Match Night" look.
+
+  The first group changes between dark and light mode.
+  The second group never changes: it is for text and overlays that sit on
+  top of photos, which stay dark in both modes.
+*/
 @theme {
-  --color-pitch: #0b0c0e;
-  --color-panel: #131418;
-  --color-ink: #f3f2ee;
-  --color-mute: #b9bbc0;
+  --color-pitch: #0b0c0e; /* page background */
+  --color-panel: #131418; /* raised surfaces and hover rows */
+  --color-ink: #f3f2ee; /* main text */
+  --color-mute: #b9bbc0; /* secondary text */
   --color-line: #25272b;
   --color-line-strong: #3a3d43;
-  --color-gold: #f2b632;
+  --color-accent: #f2b632; /* accent used as text or small marks */
+
+  --color-gold: #f2b632; /* accent used as a fill, e.g. buttons */
+  --color-night: #0b0c0e;
+  --color-chalk: #f3f2ee;
+  --color-fog: #b9bbc0;
 
   --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-sans: "Barlow", system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-pitch: #f6f5f1;
+  --color-panel: #ffffff;
+  --color-ink: #111317;
+  --color-mute: #565b64;
+  --color-line: #dfded9;
+  --color-line-strong: #bdbcb6;
+  --color-accent: #8a5a00;
 }
 
 html {
@@ -24,11 +50,17 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
+}
+
+/* White crests (Juventus) turn black on the light page background. */
+:root[data-theme="light"] .crest-adaptive {
+  filter: invert(1);
 }
 
 /* Sections fade up once as they scroll into view (see Reveal.jsx). */
@@ -46,6 +78,10 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  body {
+    transition: none;
   }
 
   .reveal {

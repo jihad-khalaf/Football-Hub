@@ -12,14 +12,16 @@ export function LogoMark({ className = 'h-9 w-9' }) {
 }
 
 // Full logo: mark plus wordmark, linking back to the Home page.
-export default function Logo() {
+// `onPhoto` keeps the light-on-dark colours when the logo sits on a hero photo.
+export default function Logo({ onPhoto = false }) {
+  const accent = onPhoto ? 'text-gold' : 'text-accent'
   return (
     <Link to="/" className="flex items-center gap-3" aria-label="Football Hub, home">
-      <span className="text-gold">
+      <span className={accent}>
         <LogoMark />
       </span>
-      <span className="font-display text-[26px] font-bold uppercase leading-none tracking-[0.04em] text-ink">
-        Football <span className="text-gold">Hub</span>
+      <span className={`font-display text-[26px] font-bold uppercase leading-none tracking-[0.04em] ${onPhoto ? 'text-chalk' : 'text-ink'}`}>
+        Football <span className={accent}>Hub</span>
       </span>
     </Link>
   )

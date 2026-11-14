@@ -12,7 +12,7 @@ export default function StandingsPreview() {
     <section id="standings" className="flex min-w-0 flex-col gap-5">
       <div className="flex items-end justify-between gap-4">
         <h2 className="font-display text-[44px] font-bold uppercase leading-none">La Liga standings</h2>
-        <Link to="/matches" className="shrink-0 font-semibold text-gold hover:text-ink">
+        <Link to="/matches" className="shrink-0 font-semibold text-accent hover:text-ink">
           Full table
         </Link>
       </div>
@@ -38,7 +38,7 @@ export default function StandingsPreview() {
               const points = row.won * 3 + row.drawn
               return (
                 <tr key={row.team} className="border-b border-line">
-                  <td className={`py-3 font-display text-xl font-semibold ${position <= CHAMPIONS_LEAGUE_PLACES ? 'text-gold' : 'text-mute'}`}>
+                  <td className={`py-3 font-display text-xl font-semibold ${position <= CHAMPIONS_LEAGUE_PLACES ? 'text-accent' : 'text-mute'}`}>
                     {position}
                   </td>
                   <th scope="row" className="py-3 font-medium">
@@ -60,7 +60,7 @@ export default function StandingsPreview() {
         </table>
       </div>
       <p className="flex items-center gap-2 text-sm text-mute">
-        <span className="h-2.5 w-2.5 bg-gold" aria-hidden="true" />
+        <span className="h-2.5 w-2.5 bg-accent" aria-hidden="true" />
         Champions League places
       </p>
     </section>

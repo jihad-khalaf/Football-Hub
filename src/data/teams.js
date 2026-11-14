@@ -16,7 +16,7 @@ export const teams = {
   'real-madrid': { name: 'Real Madrid', logo: realMadrid },
   barcelona: { name: 'Barcelona', logo: barcelona },
   'bayern-munich': { name: 'Bayern Munich', logo: bayernMunich },
-  juventus: { name: 'Juventus', logo: juventus },
+  juventus: { name: 'Juventus', logo: juventus, whiteCrest: true },
   'atletico-madrid': { name: 'Atlético Madrid', logo: atleticoMadrid },
   villarreal: { name: 'Villarreal', logo: villarreal },
   'athletic-club': { name: 'Athletic Club', logo: athleticClub },

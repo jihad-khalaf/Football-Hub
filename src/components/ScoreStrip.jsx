@@ -23,8 +23,8 @@ export default function ScoreStrip() {
         {todaysScores.map((match) => (
           <li key={match.id} className="border-b border-line last:border-b-0 sm:border-r lg:border-b-0 lg:last:border-r-0">
             <Link to="/matches" className="flex flex-col gap-2.5 px-5 py-5 transition-colors hover:bg-panel sm:px-7">
-              <span className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-widest ${match.status === 'live' ? 'text-gold' : 'text-mute'}`}>
-                {match.status === 'live' && <span className="h-2 w-2 animate-pulse rounded-full bg-gold" aria-hidden="true" />}
+              <span className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-widest ${match.status === 'live' ? 'text-accent' : 'text-mute'}`}>
+                {match.status === 'live' && <span className="h-2 w-2 animate-pulse rounded-full bg-accent" aria-hidden="true" />}
                 {match.label}
               </span>
               <TeamLine team={match.home} goals={match.homeGoals} />

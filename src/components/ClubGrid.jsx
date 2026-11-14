@@ -12,7 +12,7 @@ function ClubTile({ club }) {
         style={{ objectPosition: club.photoPosition }}
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
-      <span className="absolute inset-0 bg-linear-to-t from-pitch/95 via-pitch/35 to-pitch/10" aria-hidden="true" />
+      <span className="absolute inset-0 bg-linear-to-t from-night/95 via-night/35 to-night/10" aria-hidden="true" />
       <span className="relative flex items-end justify-between gap-4 border-b-[5px] p-6" style={{ borderColor: club.color }}>
         <span className="flex flex-col gap-1.5">
           <span className="font-display text-[40px] font-bold uppercase leading-none text-white">{club.name}</span>
@@ -20,7 +20,7 @@ function ClubTile({ club }) {
             {club.city} · Founded {club.founded}
           </span>
         </span>
-        <TeamCrest team={club.id} className="h-14 w-14" />
+        <TeamCrest team={club.id} onPhoto className="h-14 w-14" />
       </span>
     </Link>
   )
