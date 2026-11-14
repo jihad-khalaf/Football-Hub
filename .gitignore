@@ -6,3 +6,6 @@ build
 # Planning notes and course material, not part of the website
 Football-Hub-Vault/
 CS426 WEB UNI DOCS/
+
+# secret keys
+.env
