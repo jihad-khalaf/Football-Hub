@@ -130,6 +130,7 @@ const Club = () => {
         <div className="legends">
           {details.legends.map((legend) => (
             <div className="legend" key={legend.name}>
+              <img src={legend.photo} alt={legend.name} />
               <span> {legend.years} </span>
               <h3 className="display"> {legend.name} </h3>
               <p> {legend.note} </p>

@@ -2,18 +2,28 @@
 // The other clubs will each get a file with the same shape.
 
 // player and coach photos
-import courtois from '../assets/players/real-madrid/courtois.jpg';
-import valverde from '../assets/players/real-madrid/valverde.jpg';
-import huijsen from '../assets/players/real-madrid/huijsen.jpg';
-import konate from '../assets/players/real-madrid/konate.jpg';
-import cucurella from '../assets/players/real-madrid/cucurella.jpg';
-import tchouameni from '../assets/players/real-madrid/tchouameni.jpg';
-import bernardoSilva from '../assets/players/real-madrid/bernardo-silva.jpg';
-import bellingham from '../assets/players/real-madrid/bellingham.jpg';
-import diomande from '../assets/players/real-madrid/diomande.jpg';
-import guler from '../assets/players/real-madrid/guler.jpg';
-import mbappe from '../assets/players/real-madrid/mbappe.jpg';
-import mourinho from '../assets/players/real-madrid/mourinho.jpg';
+import courtois from '../assets/players/real-madrid/courtois.webp';
+import valverde from '../assets/players/real-madrid/valverde.webp';
+import huijsen from '../assets/players/real-madrid/huijsen.webp';
+import konate from '../assets/players/real-madrid/konate.webp';
+import cucurella from '../assets/players/real-madrid/cucurella.webp';
+import tchouameni from '../assets/players/real-madrid/tchouameni.webp';
+import bernardoSilva from '../assets/players/real-madrid/bernardo-silva.webp';
+import bellingham from '../assets/players/real-madrid/bellingham.webp';
+import diomande from '../assets/players/real-madrid/diomande.webp';
+import guler from '../assets/players/real-madrid/guler.webp';
+import mbappe from '../assets/players/real-madrid/mbappe.webp';
+import mourinho from '../assets/players/real-madrid/mourinho.webp';
+
+// legend photos
+import diStefano from '../assets/legends/real-madrid/di-stefano.jpg';
+import puskas from '../assets/legends/real-madrid/puskas.jpg';
+import gento from '../assets/legends/real-madrid/gento.jpg';
+import raul from '../assets/legends/real-madrid/raul.jpg';
+import zidane from '../assets/legends/real-madrid/zidane.jpg';
+import casillas from '../assets/legends/real-madrid/casillas.jpg';
+import ronaldo from '../assets/legends/real-madrid/ronaldo.jpg';
+import ramos from '../assets/legends/real-madrid/ramos.jpg';
 
 // trophy images (transparent background)
 import laLiga from '../assets/trophies/la-liga.png';
@@ -97,14 +107,14 @@ export const realMadrid = {
   ],
 
   legends: [
-    { name: 'Alfredo Di Stéfano', years: '1953–1964', note: 'Scored in five European Cup finals in a row.' },
-    { name: 'Ferenc Puskás', years: '1958–1966', note: 'Four goals in the 1960 European Cup final.' },
-    { name: 'Paco Gento', years: '1953–1971', note: 'The first player to win six European Cups.' },
-    { name: 'Raúl', years: '1994–2010', note: 'Captain and scorer of 323 goals for the club.' },
-    { name: 'Zinedine Zidane', years: '2001–2006', note: 'The volley that won the 2002 Champions League final.' },
-    { name: 'Iker Casillas', years: '1999–2015', note: '725 matches in goal for his boyhood club.' },
-    { name: 'Cristiano Ronaldo', years: '2009–2018', note: 'The record scorer, with 450 goals.' },
-    { name: 'Sergio Ramos', years: '2005–2021', note: 'The 93rd-minute header in the 2014 final.' },
+    { name: 'Alfredo Di Stéfano', photo: diStefano, years: '1953–1964', note: 'Scored in five European Cup finals in a row.' },
+    { name: 'Ferenc Puskás', photo: puskas, years: '1958–1966', note: 'Four goals in the 1960 European Cup final.' },
+    { name: 'Paco Gento', photo: gento, years: '1953–1971', note: 'The first player to win six European Cups.' },
+    { name: 'Raúl', photo: raul, years: '1994–2010', note: 'Captain and scorer of 323 goals for the club.' },
+    { name: 'Zinedine Zidane', photo: zidane, years: '2001–2006', note: 'The volley that won the 2002 Champions League final.' },
+    { name: 'Iker Casillas', photo: casillas, years: '1999–2015', note: '725 matches in goal for his boyhood club.' },
+    { name: 'Cristiano Ronaldo', photo: ronaldo, years: '2009–2018', note: 'The record scorer, with 450 goals.' },
+    { name: 'Sergio Ramos', photo: ramos, years: '2005–2021', note: 'The 93rd-minute header in the 2014 final.' },
   ],
 
   rivalries: [

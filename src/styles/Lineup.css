@@ -66,13 +66,13 @@
 }
 
 .player img {
-  width: 78px;
-  height: 78px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   border: 3px solid #ffffff;
   object-fit: cover;
-  object-position: center 15%; /* keeps the face in the circle */
-  background: #0b0c0e;
+  object-position: center top; /* the photo is a tall portrait: show the head, not the shirt */
+  background: #e9edf2; /* light circle behind the cut-out portrait */
 }
 
 .player b {

@@ -15,22 +15,22 @@ All photos are from [Wikimedia Commons](https://commons.wikimedia.org) and are u
 
 ## Player and coach photos
 
-From Wikimedia Commons. Files are in `src/assets/players/real-madrid`.
+The portraits in `src/assets/players/real-madrid` are the official squad photos from the Real Madrid website (realmadrid.com), resized. They are © Real Madrid C.F. and are used here only to identify the players in a student project.
+
+## Legend photos
+
+From Wikimedia Commons. Files are in `src/assets/legends/real-madrid`.
 
 | File | Original title on Commons | Author | Licence |
 |---|---|---|---|
-| `courtois.jpg` | Thibaut Courtois Belgium v USA 6 July 2026-076 (cropped).jpg | Bryan Berlin | CC BY-SA 4.0 |
-| `valverde.jpg` | Federico Valverde 2021 (cropped).jpg | Real Madrid | CC BY 3.0 |
-| `huijsen.jpg` | Dean Huijsen 2024.jpg | AFC Bournemouth | CC BY 3.0 |
-| `konate.jpg` | Ibrahima Konate France v Senegal 16 June 2026-516 (cropped).jpg | Bryan Berlin | CC BY-SA 4.0 |
-| `cucurella.jpg` | Marc Cucurella Argentina v Spain 19 July 2026-064 (cropped).jpg | Bryan Berlin | CC BY-SA 4.0 |
-| `tchouameni.jpg` | Aurelien Tchouameni France v Senegal 16 June 2026-447 (cropped).jpg | Bryan Berlin | CC BY-SA 4.0 |
-| `bernardo-silva.jpg` | Bernardo Silva Croatia v Portugal 2 July 2026-238.jpg | Bryan Berlin | CC BY-SA 4.0 |
-| `bellingham.jpg` | Jude Bellingham England v Ghana 23 June 2026-061 (cropped).jpg | Bryan Berlin | CC BY-SA 4.0 |
-| `diomande.jpg` | Yan Diomande Cote D'Ivoire v Ecuador 14 June 2026-17 (cropped).jpg | Bryan Berlin | CC BY-SA 4.0 |
-| `guler.jpg` | Arda Güler 2025 (cropped).jpg | LawEnthusiast | CC BY-SA 4.0 |
-| `mbappe.jpg` | Kylian Mbappe France v Senegal 16 June 2026-391 (cropped).jpg | Bryan Berlin | CC BY-SA 4.0 |
-| `mourinho.jpg` | José Mourinho 20250206 (1).jpg | Zafer | CC BY 4.0 |
+| `di-stefano.jpg` | Alfredo Di Stefano River Plate.jpg | Unknown author | Public domain |
+| `puskas.jpg` | Ferenc Puskas en 1965.jpg | Panini | Public domain |
+| `gento.jpg` | V.l.n.r. Amancio, Miguel Muñoz (trainer), Gento, Bestanddeelnr 924-4486 (Gento cropped).jpg | Fotograaf Onbekend / Anefo | CC0 |
+| `raul.jpg` | 25th Laureus World Sports Awards - Raúl - 240422 132916-2 (cropped).jpg | Barcex | CC BY-SA 4.0 |
+| `zidane.jpg` | Zinedine Zidane by Tasnim 03.jpg | Hadi Abyar | CC BY 4.0 |
+| `casillas.jpg` | Iker-Casillas-SportsTrade-2021-cropped.jpg | Web Summit | CC BY 2.0 |
+| `ronaldo.jpg` | Cristiano Ronaldo Croatia v Portugal 2 July 2026-075 (cropped).jpg | Bryan Berlin | CC BY-SA 4.0 |
+| `ramos.jpg` | Sergio Ramos Interview 2021 (cropped).jpg | Real Madrid | CC BY 3.0 |
 
 ## Trophy images
 
