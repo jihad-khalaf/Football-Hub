@@ -1,0 +1,238 @@
+/* Styles for the Matches page (pages/Matches.jsx). */
+
+.matches {
+  padding-bottom: 96px;
+}
+
+/* ---------- match preview on a photo, so colours are fixed ---------- */
+.preview {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #0b0c0e;
+  background-size: cover;
+  background-position: center 60%;
+  color: #f3f2ee;
+}
+
+.preview::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0b0c0e 5%, rgba(11, 12, 14, 0.7) 55%, rgba(11, 12, 14, 0.6));
+}
+
+.preview .container {
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 48px;
+}
+
+.preview-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f2b632;
+}
+
+.preview-teams {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 28px;
+}
+
+.preview-teams div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.preview-teams h1 {
+  font-size: 88px;
+}
+
+.preview-teams > span {
+  font-size: 32px;
+  color: #b9bbc0;
+}
+
+.preview-facts {
+  margin-top: 24px;
+  font-size: 18px;
+  color: #d5d7da;
+}
+
+/* ---------- preview text and head to head ---------- */
+.preview-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  padding-top: 72px;
+}
+
+.preview-text {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.h2h {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.h2h-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.h2h-row span {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.h2h-row b {
+  font-weight: 600;
+  text-align: right;
+}
+
+/* ---------- results and fixtures ---------- */
+.match-list {
+  padding-top: 96px;
+}
+
+.match-list .section-head {
+  flex-wrap: wrap;
+}
+
+.tabs {
+  display: flex;
+  border: 1px solid var(--line-strong);
+}
+
+.tabs button,
+.filters button {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* the chosen tab is amber */
+.tabs button.active {
+  background: #f2b632;
+  color: #0b0c0e;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.filters button {
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.filters button:hover,
+.tabs button:hover {
+  color: var(--text);
+}
+
+.tabs button.active:hover {
+  color: #0b0c0e;
+}
+
+.filters button.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.no-matches {
+  padding: 24px 0;
+  color: var(--muted);
+}
+
+/* ---------- league table ---------- */
+.matches-table {
+  padding-top: 96px;
+}
+
+.sample-note {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---------- smaller screens ---------- */
+@media (max-width: 1024px) {
+  .preview-teams h1 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 900px) {
+  .preview-columns {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  /* teams stacked: home, "vs", away */
+  .preview-teams {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .preview {
+    min-height: 440px;
+  }
+
+  .preview-teams div {
+    gap: 14px;
+  }
+
+  .preview-teams h1 {
+    font-size: 48px;
+  }
+
+  .preview-teams img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .preview-teams > span {
+    font-size: 22px;
+  }
+
+  .match-list,
+  .matches-table {
+    padding-top: 64px;
+  }
+
+  .h2h-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .h2h-row b {
+    text-align: left;
+  }
+}

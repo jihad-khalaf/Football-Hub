@@ -1,0 +1,86 @@
+/* One match in the results or fixtures list (components/MatchRow.jsx). */
+
+.match-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.match-when {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.match-when b {
+  font-weight: 600;
+}
+
+.match-when span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* home team | score | away team, with the score always in the middle */
+.match-teams {
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+  align-items: center;
+}
+
+.match-team {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+}
+
+/* the home team sits on the right of its column, next to the score */
+.match-team.home {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.match-score {
+  font-size: 32px;
+  text-align: center;
+}
+
+.match-time {
+  justify-self: center;
+  padding: 6px 12px;
+  border: 1px solid var(--line-strong);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .match-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .match-when {
+    flex-direction: row;
+    gap: 12px;
+    align-items: baseline;
+  }
+
+  .match-teams {
+    grid-template-columns: 1fr 72px 1fr;
+  }
+
+  .match-team {
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .match-score {
+    font-size: 26px;
+  }
+}

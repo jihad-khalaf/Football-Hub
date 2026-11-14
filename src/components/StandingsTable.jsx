@@ -7,12 +7,13 @@ import '../styles/Standings.css';
 
 // The league table. Played and points are CALCULATED from won / drawn / lost,
 // so the numbers can never disagree with each other.
-const StandingsTable = () => {
+// PROPS: showLink - true on the Home page, where the table links to the Matches page
+const StandingsTable = ({ showLink }) => {
   return (
     <div className="standings">
       <div className="section-head">
         <h2 className="section-title display"> La Liga standings </h2>
-        <Link to="/matches" className="section-link"> Full table </Link>
+        {showLink && <Link to="/matches" className="section-link"> Full table </Link>}
       </div>
 
       {/* this box lets the table scroll sideways on a narrow phone */}

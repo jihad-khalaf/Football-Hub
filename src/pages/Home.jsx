@@ -45,7 +45,7 @@ const Home = () => {
 
       {/* table on the left, news on the right */}
       <div className="home-columns container">
-        <StandingsTable />
+        <StandingsTable showLink={true} />
         <NewsList />
       </div>
     </div>
