@@ -1,0 +1,196 @@
+/* Styles for the News page (pages/News.jsx).
+   News.css is the small news list on the Home page. */
+
+.news-page {
+  padding-top: 72px;
+  padding-bottom: 96px;
+}
+
+.news-page h1 {
+  font-size: 112px;
+}
+
+/* ---------- category buttons ---------- */
+.news-page .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.news-page .filters button {
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.news-page .filters button:hover {
+  color: var(--text);
+}
+
+.news-page .filters button.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---------- the stories: a grid of three columns ---------- */
+.stories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 32px;
+  margin-top: 48px;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.story-photo {
+  overflow: hidden;
+}
+
+.story-photo img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.7s;
+}
+
+.story:hover .story-photo img {
+  transform: scale(1.05);
+}
+
+.story-meta {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.story-text h2 {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.story-text p {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.story-body {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.story-toggle {
+  margin-top: 14px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.story-toggle:hover {
+  color: var(--accent);
+}
+
+/* the FIRST story is the lead: it fills the whole row, photo left and text right */
+.story:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.story:first-child .story-photo img {
+  height: 440px;
+}
+
+.story:first-child h2 {
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.story:first-child .story-text p {
+  font-size: 18px;
+}
+
+.no-stories {
+  padding: 32px 0;
+  color: var(--muted);
+}
+
+.sample-note {
+  margin-top: 56px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---------- smaller screens ---------- */
+@media (max-width: 1024px) {
+  .stories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story:first-child {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .story:first-child .story-photo img {
+    height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .news-page {
+    padding-top: 48px;
+  }
+
+  .news-page h1 {
+    font-size: 64px;
+  }
+
+  .stories {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story:first-child {
+    padding-bottom: 40px;
+  }
+
+  .story:first-child .story-photo img {
+    height: 240px;
+  }
+
+  .story:first-child h2 {
+    font-size: 38px;
+  }
+}
