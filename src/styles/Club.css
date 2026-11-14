@@ -1,0 +1,382 @@
+/* Styles for the club page (pages/Club.jsx).
+   var(--club) is the club's own colour, set in Club.jsx. */
+
+.club-page {
+  padding-bottom: 96px;
+}
+
+/* ---------- top banner: text on a photo, so colours are fixed ---------- */
+.club-hero {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #0b0c0e;
+  background-size: cover;
+  background-position: center;
+  color: #f3f2ee;
+}
+
+.club-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0b0c0e 5%, rgba(11, 12, 14, 0.55) 60%, rgba(11, 12, 14, 0.5));
+}
+
+.club-hero-content {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+
+.club-hero h1 {
+  font-size: 112px;
+  line-height: 0.9;
+}
+
+.club-hero p {
+  max-width: 560px;
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #d5d7da;
+}
+
+/* ---------- row of facts under the banner ---------- */
+.club-facts {
+  border-top: 4px solid var(--club);
+  border-bottom: 1px solid var(--line);
+}
+
+.club-facts-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.club-facts-row div,
+.stadium-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.club-facts-row div {
+  padding: 20px 24px 20px 0;
+}
+
+.club-facts-row span,
+.stadium-facts span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.club-facts-row b,
+.stadium-facts b {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+/* ---------- every section of the page ---------- */
+.club-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 80px;
+}
+
+.club-formation {
+  font-size: 36px;
+  color: var(--accent);
+}
+
+/* ---------- starting eleven: pitch on the left, coach on the right ---------- */
+.lineup-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.coach {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coach img {
+  width: 100%;
+  height: 380px;
+  margin-bottom: 12px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-bottom: 5px solid var(--club);
+}
+
+.coach span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.coach h3 {
+  font-size: 40px;
+}
+
+.coach p {
+  margin-top: 8px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- trophy cabinet ---------- */
+.trophies {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.trophy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 12px 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.trophy img {
+  height: 130px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.trophy b {
+  font-size: 52px;
+  line-height: 1;
+}
+
+.trophy span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* ---------- stadium ---------- */
+.stadium {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.stadium img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.stadium-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stadium-text h3 {
+  font-size: 44px;
+}
+
+.stadium-text p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.stadium-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 36px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- history: year on the left, text on the right ---------- */
+.history-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.history-item b {
+  font-size: 48px;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.history-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.history-item p {
+  max-width: 640px;
+  margin-top: 6px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- legends and rivalries ---------- */
+.legends {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.rivalries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.legend,
+.rivalry {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--club);
+}
+
+.legend span,
+.rivalry span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.legend h3 {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.rivalry h3 {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.legend p,
+.rivalry p {
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- message when a club page does not exist yet ---------- */
+.club-missing {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.club-missing h1 {
+  font-size: 60px;
+}
+
+.club-missing p {
+  color: var(--muted);
+}
+
+/* ---------- tablet ---------- */
+@media (max-width: 1024px) {
+  .club-hero h1 {
+    font-size: 80px;
+  }
+
+  .lineup-columns,
+  .stadium {
+    grid-template-columns: 1fr;
+  }
+
+  .coach img {
+    height: 420px;
+  }
+
+  .trophies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .legends {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- phone ---------- */
+@media (max-width: 640px) {
+  .club-hero {
+    min-height: 400px;
+  }
+
+  .club-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .club-hero-content > img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .club-hero h1 {
+    font-size: 56px;
+  }
+
+  .club-hero p {
+    font-size: 16px;
+  }
+
+  .club-facts-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .club-section {
+    padding-top: 56px;
+  }
+
+  .trophies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stadium img {
+    height: 240px;
+  }
+
+  .history-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .legends,
+  .rivalries {
+    grid-template-columns: 1fr;
+  }
+}

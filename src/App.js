@@ -4,6 +4,7 @@ import useLocalStorage from './hooks/useLocalStorage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Club from './pages/Club';
 import ComingSoon from './pages/ComingSoon';
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            {/* dynamic route: ":id" can be any club, e.g. /clubs/real-madrid */}
+            <Route path="/clubs/:id" element={<Club />} />
             {/* pages that are not built yet show a temporary page */}
             <Route path="*" element={<ComingSoon />} />
           </Routes>

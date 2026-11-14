@@ -11,7 +11,7 @@ export const clubs = [
     city: 'Madrid',
     founded: 1902,
     stadium: 'Santiago Bernabéu',
-    color: '#E8E6DF',
+    color: '#C9A227',
     photo: bernabeu,
     photoAlt: 'The Santiago Bernabéu pitch seen from the upper tier',
   },

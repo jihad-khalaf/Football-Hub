@@ -42,7 +42,7 @@ src/
 
 ## Status
 
-The Home page is built. The other pages are added one at a time.
+The Home page and the Real Madrid club page (`/clubs/real-madrid`) are built. The other pages are added one at a time.
 
 ## Screenshots
 

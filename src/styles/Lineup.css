@@ -1,0 +1,115 @@
+/* The pitch is green in both themes, so its colours are fixed. */
+.pitch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 720px;
+  padding: 36px 16px 28px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  /* mowing stripes: two greens repeated down the pitch */
+  background: repeating-linear-gradient(to bottom, #1c6b3c 0px, #1c6b3c 80px, #1a6337 80px, #1a6337 160px);
+}
+
+/* ---------- pitch markings ---------- */
+.pitch-halfway,
+.pitch-circle,
+.pitch-box {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+/* the halfway line is at the TOP edge: we only draw one half of the pitch */
+.pitch-halfway {
+  top: 0;
+  left: 0;
+  right: 0;
+  border-width: 0 0 2px;
+}
+
+.pitch-circle {
+  top: -90px;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  margin-left: -90px;
+  border-radius: 50%;
+}
+
+/* penalty box at the bottom, around the goalkeeper */
+.pitch-box {
+  bottom: 0;
+  left: 50%;
+  width: 56%;
+  height: 150px;
+  margin-left: -28%;
+  border-bottom: 0;
+}
+
+/* ---------- players ---------- */
+.pitch-row {
+  position: relative; /* keeps the players above the markings */
+  display: flex;
+  justify-content: space-around;
+}
+
+.player {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.player img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+  object-position: center 15%; /* keeps the face in the circle */
+  background: #0b0c0e;
+}
+
+.player b {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.player span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 640px) {
+  .pitch {
+    min-height: 600px;
+    padding: 28px 4px 20px;
+  }
+
+  .player {
+    width: 80px;
+  }
+
+  .player img {
+    width: 56px;
+    height: 56px;
+    border-width: 2px;
+  }
+
+  .player b {
+    font-size: 12px;
+  }
+
+  .player span {
+    font-size: 11px;
+  }
+}
