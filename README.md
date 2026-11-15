@@ -46,7 +46,19 @@ The Home page and the four club pages (`/clubs/real-madrid`, `barcelona`, `bayer
 
 ## Screenshots
 
-To be added when the pages are finished.
+## Screenshots
+
+### Home Page
+
+![Home Page](./src/assets/screenshot/home.png)
+
+### Clubs Page
+
+![Clubs Page](./src/assets/screenshot/clubs.png)
+
+### Players Page
+
+![Players Page](./src/assets/screenshot/players.png)
 
 ## Credits
 
