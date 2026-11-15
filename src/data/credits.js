@@ -1,4 +1,4 @@
-// Image credits shown on the About page. The same list is in CREDITS.md.
+// Image credits shown on the About page.
 // Every photo below is from Wikimedia Commons (commons.wikimedia.org).
 
 export const photoCredits = [

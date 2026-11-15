@@ -46,8 +46,6 @@ The Home page and the four club pages (`/clubs/real-madrid`, `barcelona`, `bayer
 
 ## Screenshots
 
-## Screenshots
-
 ### Home Page
 
 ![Home Page](./src/assets/screenshot/home.png)
@@ -62,4 +60,4 @@ The Home page and the four club pages (`/clubs/real-madrid`, `barcelona`, `bayer
 
 ## Credits
 
-Image and font credits are in [CREDITS.md](CREDITS.md). Scores, standings and news are sample data written for this project.
+Image and font credits are listed on the About page. Scores, standings and news are sample data written for this project.

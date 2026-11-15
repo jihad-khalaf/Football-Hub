@@ -114,9 +114,9 @@ const About = () => {
       <div className="about-section container">
         <div className="section-head">
           <h2 className="section-title display"> Image credits </h2>
-          <button className="credits-toggle" onClick={() => setShowCredits(!showCredits)}>
+          {/* <button className="credits-toggle" onClick={() => setShowCredits(!showCredits)}>
             {showCredits ? 'Hide photo list' : 'Show all photo credits'}
-          </button>
+          </button> */}
         </div>
 
         <div className="other-credits">

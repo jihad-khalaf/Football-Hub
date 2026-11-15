@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useLocalStorage from "./hooks/useLocalStorage";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Club from "./pages/Club";
@@ -13,7 +13,6 @@ import Clubs from "./pages/Clubs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Features from "./pages/Features";
-import ComingSoon from "./pages/ComingSoon";
 
 function App() {
   // HOOK: the theme word ('dark' or 'light'), saved in localStorage
@@ -27,7 +26,7 @@ function App() {
   return (
     <div className={`App ${theme}`}>
       <Router>
-        <Navbar theme={theme} onToggleTheme={toggleTheme} />
+        <NavBar theme={theme} onToggleTheme={toggleTheme} />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
