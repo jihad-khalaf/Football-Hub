@@ -52,7 +52,7 @@ The Home page and the four club pages (`/clubs/real-madrid`, `barcelona`, `bayer
 
 ![Home Page](./src/assets/screenshot/home.png)
 
-### Clubs Page
+### Matches Page
 
 ![Clubs Page](./src/assets/screenshot/clubs.png)
 
