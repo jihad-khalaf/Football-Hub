@@ -1,33 +1,33 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import useLocalStorage from './hooks/useLocalStorage';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Club from './pages/Club';
-import Matches from './pages/Matches';
-import Players from './pages/Players';
-import News from './pages/News';
-import About from './pages/About';
-import Clubs from './pages/Clubs';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
-// TEMPORARY: Jihad replaces this line with: import Features from './pages/Features';
-import ComingSoon from './pages/ComingSoon';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import useLocalStorage from "./hooks/useLocalStorage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Club from "./pages/Club";
+import Matches from "./pages/Matches";
+import Players from "./pages/Players";
+import News from "./pages/News";
+import About from "./pages/About";
+import Clubs from "./pages/Clubs";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+import Features from "./pages/Features";
+import ComingSoon from "./pages/ComingSoon";
 
 function App() {
   // HOOK: the theme word ('dark' or 'light'), saved in localStorage
-  const [theme, setTheme] = useLocalStorage('theme', 'dark');
+  const [theme, setTheme] = useLocalStorage("theme", "dark");
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   // the class becomes "App dark" or "App light" — App.css sets the colours for each
   return (
     <div className={`App ${theme}`}>
       <Router>
-        <NavBar theme={theme} onToggleTheme={toggleTheme} />
+        <Navbar theme={theme} onToggleTheme={toggleTheme} />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -39,8 +39,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/clubs" element={<Clubs />} />
             <Route path="/contact" element={<Contact />} />
-            {/* TEMPORARY: Jihad replaces <ComingSoon /> with <Features /> */}
-            <Route path="/features" element={<ComingSoon />} />
+            <Route path="/features" element={<Features />} />
             {/* "*" matches any other address, so unknown pages show "Page not found" */}
             <Route path="*" element={<NotFound />} />
           </Routes>

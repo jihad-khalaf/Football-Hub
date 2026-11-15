@@ -1,0 +1,120 @@
+/* Styles for the Features page (pages/Features.jsx). */
+
+.features {
+  padding-bottom: 96px;
+}
+
+/* ---------- banner: text on a photo, so colours are fixed ---------- */
+.features-banner {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #0b0c0e;
+  background-size: cover;
+  background-position: center;
+  color: #f3f2ee;
+}
+
+.features-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0b0c0e 5%, rgba(11, 12, 14, 0.6) 60%, rgba(11, 12, 14, 0.55));
+}
+
+.features-banner .container {
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+
+.features-banner h1 {
+  font-size: 112px;
+}
+
+.features-banner p {
+  max-width: 520px;
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #d5d7da;
+}
+
+/* ---------- the feature blocks: two columns ---------- */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 64px;
+  padding-top: 72px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 0 40px;
+  border-top: 1px solid var(--line);
+}
+
+.feature-number {
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.feature h2 {
+  font-size: 56px;
+}
+
+.feature p {
+  max-width: 480px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* link sits at the bottom of the block so links line up across a row */
+.feature-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 8px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 4px;
+}
+
+.feature-link:hover {
+  color: var(--accent);
+}
+
+/* ---------- sample data note ---------- */
+.features-note {
+  padding-top: 24px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---------- smaller screens ---------- */
+@media (max-width: 900px) {
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .features-banner {
+    min-height: 280px;
+  }
+
+  .features-banner h1 {
+    font-size: 64px;
+  }
+
+  .features-list {
+    padding-top: 48px;
+  }
+
+  .feature h2 {
+    font-size: 44px;
+  }
+}
